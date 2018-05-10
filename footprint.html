@@ -1,0 +1,163 @@
+<!--足迹跳转页面-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>足迹</title>
+	<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+			}
+			
+			#box {
+				width: 100%;
+				height: 100vh;
+			}
+			
+			#top {
+				width: 100%;
+				height: 160px;
+				background: gray;
+			}
+			
+			#content {
+				width: 100%;
+				font-size: 0;
+				margin-bottom: 50px;
+			}
+			
+			#foot {
+				width: 100%;
+				height: 729px;
+				padding-bottom: 20px;
+				background: gray;
+			}
+			#wrap{
+				width: 1208px;
+				margin: 10px auto 0px;
+			}
+			.allprint{
+				width: 1208px;
+				height: 53px;
+				line-height: 53px;
+				font-size: 12px;
+				background-color: #f5f5f5;
+				padding-left: 10px;
+			}
+			.print{
+				width: 1190px;
+				/*height: 600px;*/
+				margin: 30px 0px 0px 10px;
+				/*background-color: pink;*/
+				border-left: 4px solid #ff6725;
+				position: relative;
+			}
+			.print>p{
+				font-size: 12px;
+				padding-left: 20px;
+			}
+			.print>img{
+				position: absolute;
+				left: -12px;
+			}
+			.print img:nth-of-type(1){
+				top:-11px;
+			}
+			.print img:nth-of-type(2){
+				bottom: -11px;
+			}
+			.print-list{
+				width: 1158px;
+				margin-left: 20px;
+				overflow: hidden;
+			}
+			.print-items{
+				width: 232px;
+				height: 270px;
+				border:1px solid #ddd;
+				float: left;
+			}
+			.print-items img{
+				width: 180px;
+				height: 150px;
+				margin-left: 26px;
+			}
+			 .p1{
+				text-align: center;
+				padding: 8px 0px;
+			}
+			.print-items .p1 a{
+				text-decoration: none;
+				font-size: 14px;
+				color:black;
+			}
+			 .p2{
+				font-size: 14px;
+				color: #ff6725;
+				text-align: center;
+				padding: 5px;
+			}
+			.p2-2{
+				color: black;
+			}
+			 .p3{
+				font-size: 12px;
+				color: #ff6725;
+				margin: 10px 10px 0px 20px;
+			}
+			.print-items .p3 span{
+				font-size: 12px;
+				color: #ff6725;
+				border:1px solid #ff6725;
+				padding: 5px 10px;
+				border-radius: 3px;
+				margin-right: 10px;
+			}
+	
+
+	</style>
+</head>
+<body>
+		<div id="sidenav"></div>
+		<div id="box">
+			<div id="top"></div>
+			<div id="content">
+				<div id="wrap">
+					<div class="allprint">我的全部足迹></div>
+					<div class="print">
+						<p>全部足迹</p>
+						<img src="img/footprint1.png" alt="">
+						<div class="print-list">
+							<div class="print-items">
+								<a href="">
+									<img src="img/footprint2.jpg" alt="">
+								</a>
+								<p class="p1">
+									<a href="">
+										美羊羊五福临门水果礼盒(实惠装)
+									</a>
+								</p>
+								<p class="p2">
+									<span>￥158</span>&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="p2-2">￥198</span>
+								</p>
+								<p class="p3">
+									<span>加入购物车</span>
+									<span>删除足迹</span>
+								</p>	
+							</div>
+						</div>
+						<img src="img/footprint1.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div id="foot"></div>
+		</div>
+</body>
+<script	type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$("#sidenav").load("sidenav.html");
+</script>
+</html>

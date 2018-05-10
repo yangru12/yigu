@@ -1,0 +1,349 @@
+<!--食尚资讯鸡蛋堡页面-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>食尚资讯鸡蛋堡</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100%;
+				height: 100vh;
+			}
+			#top{
+				width: 100%;
+				height: 160px;
+				background: gray;
+			}
+			
+			#content{
+				width: 100%;
+				height: 1020px;
+				padding-bottom: 50px;
+			}
+			#wrap{
+				width: 1208px;
+				height: 515px;
+				margin: 10px auto 0px;
+			}
+			/*标题*/
+			#wrap-title{
+				width: 1208px;
+				height: 30px;
+				
+			}
+			#wrap-title span{
+				font-size: 18px;
+			}
+			#wrap-title span:last-child{
+				color: red;
+			}
+			#wrap-pic{
+				display: flex;
+			}
+			#wrap-title span{
+				padding-right: 15px;
+			}
+			#img1{
+				width: 515px;
+				height: 515px;
+			}
+			#wrap-right{
+				width: 643px;
+				height: 454px;
+				margin-left: 50px;
+			}
+			#one{
+				font-size: 32px;
+				font-weight: bold;
+				padding: 0px 10px 10px 0px;
+				text-align: left;
+			}
+			#foot{
+				width: 100%;
+				height: 729px;
+				padding-bottom: 20px;
+				background: gray;
+			}
+			#sprice{
+				
+				width: 112.5px;
+				height: 26px;
+				padding: 10px;
+				margin: 20px 0px 0px;
+				border: 1px solid lightgray;
+				display: flex;
+				justify-content: space-between;
+			}
+			#sprice span{
+				color: #FF6600;
+			}
+			#sprice img{
+				vertical-align: middle;
+			}
+			#cailiao{
+				width: 640px;
+				height: 116px;
+				margin-top: 36px;
+				border: 1px solid lightgray;
+			}
+			.solid{
+				width: 1208px;
+				height: 1px;
+				border-bottom: 1px solid lightgray;
+				margin: 10px auto;
+				padding-top: 10px;
+			}
+			#wrap-1{
+				width: 1208px;
+				height: 128px;
+				margin: 0 auto;
+			}
+			#wrap-1 h3{
+				padding-bottom: 10px;
+				height: 36px;
+				font-weight: 400;
+				font-size: 24px;
+			}
+			#wrap-1 p{
+				font-size: 12px;
+				height: 16px;
+			}
+			#wrap-2{
+				width: 1208px;
+				height: 329px;
+				margin: 0 auto;
+			}
+			#shicai{
+				width: 1208px;
+				height: 251px;
+				margin-top: 20px;
+			}
+			#shicai img{
+				width: 230px;
+				height: 230px;
+			}
+			#shicai:hover #age{
+				color:#9FBE06;
+			}
+			#age:hover{
+				color: #9FBE06;
+			}
+			#shicai p{
+				width: 230px;
+				height: 24px;
+			}
+			#age{
+				text-decoration: none;
+				color: black;
+				display: inline-block;
+			}
+			#shicai p a span{
+				color: red;
+				padding-left: 20px;
+			}
+			
+			/*反馈意见表*/
+			
+			#yijian {
+				width: 40px;
+				height: 40px;
+				background: #666;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				padding-bottom: 2px;
+				padding-top: 3px;
+				cursor:pointer;
+			}
+			.parent{
+				position: fixed;
+				bottom: 0;
+				right: 0;
+			}
+			#sheet{
+				width: 357px;
+				height: 298px;
+				position: absolute;
+				/*top: -100px;
+				left: -388px;*/
+				background-color: white;
+				box-shadow: 2px 2px 10px 2px grey;
+				padding: 0px 10px 0px 20px;
+				display: none;
+				z-index: 3;
+				animation: run 0.5s 0s linear forwards;
+			}
+			
+			@keyframes run{
+				from{
+					top: 0;
+					left: -388px;
+				}
+				to{
+					top: -255px;
+					left: -388px;
+				}
+			}
+			@keyframes run1{
+				from{
+					top: -255px;
+					left: -388px;
+				}
+				to{
+					top: 50px;
+					left: -388px;
+				}
+			}
+			.sheet-title{
+				width: 327px;
+				height: 28px;
+				padding-top: 5px;
+				line-height: 28px;
+			    font-size: 18px;
+			    font-weight: 700;
+			    display: flex;
+			    justify-content: space-between;
+			}
+			#disappear{
+				color: lightgray;
+				cursor:pointer;
+			}
+			.sheet-content{
+				width: 317px;
+				height: 227px;
+				padding: 10px 10px 0px 0px;
+				font-size: 12px;
+			}
+			.sheet-content-t span{
+				color: red;
+			}
+			.sheet-content textarea{
+				width: 300px;
+			    height: 54px;
+			    padding: 4px;
+			    margin: 6px 0 9px;
+			    vertical-align: top;
+			    resize: none;
+			    overflow: auto;
+			    box-sizing: content-box!important;
+			    display: inline-block;
+			    border: 1px solid lightgray;
+			    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			}
+			#contact{
+				border: 1px solid lightgray;
+				width: 300px;
+				height: 30px;
+				padding: 5px;
+				margin-top: 10px;
+			}
+			#btn{
+				width: 55px;
+				height: 24px;
+				padding: 0px 14px;
+				background-color: #388bff;
+				line-height: 24px;
+				margin-top: 20px;
+			}
+			#btn a{
+				color: white;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			#big-box{
+				width: 100%;
+				height: 100vh;
+				background-color: black;
+				opacity: 0.3;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+				
+		<div id="box">
+			<div id="top"></div>
+				<div id="content">
+					<div id="wrap">
+						<div id="wrap-title">
+							<span>首页></span><span>吃饭靠谱></span><span>香肠鸡蛋堡</span>
+						</div>
+						<div id="wrap-pic">
+							<img src="img/ageda.jpg" id="img1" alt="" />	
+							<div id="wrap-right">
+								<p id="one">香肠鸡蛋堡</p>
+								<img src="img/food-details-wx.jpg" alt="" />
+								<p id="sprice"><img src="img/xin.png" alt="" /><span>166人想吃</span></p>
+								<p id="cailiao"><img src="img/cailiao.jpg" alt="" /></p>
+							</div>
+						</div>
+						
+					</div>
+					<p class="solid"></p>
+					<div id="wrap-1">
+						<h3>制作步骤</h3>
+						<p>1.一个香肠切成两半。</p>
+						<p>2.平面向下弧面向上，从中间一分为二，切记尾部不要切断。</p>
+						<p>3.放入油锅稍微煎一煎，等它变软弯过去变成心形。</p>
+						<p>4.用牙签将心尖固定，好了再放入鸡蛋就OK了。</p>
+					</div>
+					<p class="solid"></p>
+					<div id="wrap-2">
+						<h2>精选食材</h2>
+						<div id="shicai">
+							<a href=""><img src="img/shicai.jpg" alt="" /></a>
+							<p><a href="" id="age">依谷生态初生蛋(12枚)<span>￥29.9</span></a></p>
+						</div>
+						
+							
+						
+					</div>
+				</div>
+				
+				<div id="foot"></div>
+		</div>
+		<div class="parent">
+			<p id="yijian">反馈建议</p>
+			<p id="big-box"></p>
+			<div id="sheet">
+				<div class="sheet-title">
+					<span>意见反馈</span>
+					<span id="disappear">X</span>
+				</div>
+				<div class="sheet-content">
+					<p class="sheet-content-t">反馈内容<span>（*必填）</span></p>
+					<textarea  placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（400字以内），感谢您的支持"></textarea>
+					<p>联系方式</p>
+					<input type="text" id="contact" placeholder="请留下您的联系方式，以便我们及时回复您"/>
+					<p id="btn"><a href="###">提交反馈</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+<script	type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		//点击反馈建议建议页面显示
+		$("#yijian").click(function(){
+			$("#big-box").css("display","block");
+			$("#sheet").css('animation','run 0.5s both');
+			$("#sheet").css("display","block");
+		})
+		var top1 = -255;
+		$("#disappear").click(function(){
+			$("#sheet").css('animation','run1 0.5s both');
+			$("#big-box").css("display","none");
+		})
+		//点击提交反馈输入框清空
+		$("#btn").click(function(){
+			$("textarea").val("");
+			$("#contact").val("");
+		})
+	</script>
+</html>

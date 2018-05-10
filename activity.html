@@ -1,0 +1,251 @@
+	<!--活动专区页面-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>活动专区</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100%;
+				height: 100vh;
+			}
+			#top{
+				width: 100%;
+				height: 160px;
+				background: gray;
+			}
+			#img1{
+				width: 100%;
+				height: 440px;
+			}
+			#content{
+				width: 100%;
+				height: 989px;
+				margin-bottom: 50px;
+			}
+			#wrap{
+				width: 1208px;
+				height: 989px;
+				margin: 0 auto;
+			}
+			#img{
+				width: 1208px;
+				height: 40px;
+				margin: 50px 0px 5px 0px;
+				border-bottom: 6px solid #fd7400;
+			}
+			#wrap-top{
+				margin: 30px 10px 0px 0px;
+				width: 1200px;
+				height: 372px;
+				display: flex;
+				
+			}
+			#wrap-left,#wrap-right{
+				width: 590px;
+				height: 372px;
+				border: 1px solid lightgray;
+				position: relative;
+				text-align: center;
+			}
+			#wrap-left{
+				margin-right: 10px;
+			}
+			#wrap-right{
+				margin-left: 10px;
+			}
+			.nav{
+				width:590px;
+				height: 25px;
+				background: black;
+				opacity: 0.6;
+				color: white;
+				position: absolute;
+				bottom: 48px;
+				padding: 5px 0px;
+				left: 0;
+				text-align: center;
+				line-height: 25px;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				font-weight: 700;
+				font-size: 18px;
+			}
+			a:hover{
+				color: #9fbe06;
+			}
+			
+			#wrap-bottom{
+				margin: 50px 0px 0px 0px;
+				width: 1200px;
+				height: 440px;
+				display: flex;
+				padding-bottom: 58px;
+				justify-content: space-between;
+			}
+			#wrap1-left{
+				width: 885px;
+				height: 440px;
+				background: url(img/download1.jpg) no-repeat;
+			}
+			#wrap1-left h2{
+				width: 885px;
+				height: 36px;
+				margin: 30px 0px 10px 0px;
+			}
+			.wrap1-1{
+				width: 240px;
+				height: 293px;
+				padding: 10px;
+				padding: 10px;
+				margin: 20px 20px 0px 15px;
+				background: white;
+				float: left;
+				text-align: center;
+			}
+			.wrap1-1 img{
+				width: 200px;
+				height: 210px;
+			}
+			.shop{
+				display: flex;
+				padding: 10px 0px;
+				margin-top: 15px;
+				width: 240px;
+				height: 27px;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.script{
+				color: red;
+				font-size: 18px;
+			}
+			.script span{
+				text-decoration: line-through;
+				font-size: 12px;
+				color: gray;
+			}
+			.shopping a{
+				width: 64px;
+				height: 24px;
+				padding: 5px 10px;
+				background: red;
+				border-radius:5px;
+				color: white;
+			}
+			#wrap1-right{
+				width: 275px;
+				height: 440px;
+				background: #e5e5e5;
+			}
+			#wrap1-right a img{
+				width: 275px;
+				height: 275px;
+			}
+			#pijiu{
+				font-size: 16px;
+				width: 247px;
+				height: 22px;
+				padding-top: 10px;
+				margin: 0 20px;
+			}
+			#tese{
+				font-size: 12px;
+				padding-top: 10px;
+				margin: 0 20px;
+			}
+			.small{
+				position: absolute;
+			    background: url(img/download2.png) no-repeat;
+			    padding: 0px;
+			    margin-left: 20px;
+			    height: 56px;
+			    width: 98px;
+			    line-height: 50px;
+			    text-align: center;
+			    font-size: 16px;
+			    color: #fff;
+			    margin-top: -4px;
+			}
+			#foot{
+				width: 100%;
+				height: 729px;
+				padding-bottom: 20px;
+				background: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sidenav"></div>
+		<div id="box">
+			<div id="top"></div>
+				<img src="img/download.jpg" id="img1" alt="" />
+				<div id="content">
+					<div id="wrap">
+						<div id="img">
+							<img src="img/hdzq-title-yh.jpg" alt="" />
+						</div>
+						<div id="wrap-top">
+							<div id="wrap-left">
+								<a href="bank.html"><img src="img/age4.png" alt="" /></a>
+								<p class="nav">活动事件:2018-04-08至2018-12-10</p>
+								<a href="bank.html">一个有温度的礼物见着有份！</a>
+							</div>
+							<div id="wrap-right">
+								<a href="poverty.html"><img src="img/age3.png" alt="" /></a>
+								<p class="nav">活动事件:2018-04-08至2018-12-31</p>
+								<a href="poverty.html">依谷扶贫之路</a>
+							</div>
+						</div>
+						<div id="wrap-bottom">
+							<div id="wrap1-left">
+								<h2>热卖商品推荐</h2>
+								<div class="wrap1-1">
+									<a href=""><img src="img/age.jpg" alt="" /></a>
+									<p>新福源初生蛋(40只)</p>
+									<div class="shop">
+										<p class="script">￥106.00<span>￥120.00</span></p>
+										<p class="shopping"><a href="">立即购买</a></p>
+									</div>
+									
+								</div>
+								<div class="wrap1-1">
+									<a href=""><img src="img/age2.jpg" alt="" /></a>
+									<p>台湾马玉山紫山药黑米仁494g</p>
+									<div class="shop">
+										<p class="script">￥106.00<span>￥120.00</span></p>
+										<p class="shopping"><a href="">立即购买</a></p>
+									</div>
+								</div>
+								<div class="wrap1-1">
+									<a href=""><img src="img/age1.jpg" alt="" /></a>
+									<p>美心精致原味鸡蛋卷34.8g</p>
+									<div class="shop">
+										<p class="script">￥106.00<span>￥120.00</span></p>
+										<p class="shopping"><a>立即购买</a></p>
+									</div>
+								</div>
+							</div>
+							<div id="wrap1-right">
+								<span class="small">菜谱推荐</span>
+								<a href="like.html"><img src="img/age5.jpg" alt="" /></a>
+								<p id="pijiu">啤酒豆瓣焖黄鱼</p>
+								<p id="tese">这道菜的特点是放入了三种酒，白酒、料酒、啤酒和豆瓣酱一起解决黄鱼的腥味。烧制出来的黄鱼咸鲜微辣回甜，肉质很鲜嫩，虽然是煎的鱼，它的表皮很韧劲。味道酱香浓郁；回味有甜让人欲罢不能！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="foot"></div>
+		</div>
+	</body>
+	<script	type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$("#sidenav").load("sidenav.html");
+	</script>
+</html>

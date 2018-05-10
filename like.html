@@ -1,0 +1,720 @@
+<!--食尚资讯页面-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>食尚资讯</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100%;
+				height: 100vh;
+			}
+			#top{
+				width: 100%;
+				height: 160px;
+				background: gray;
+			}
+			#img{
+				width: 100%;
+				height: 440px;
+			}
+			#content{
+				width: 100%;
+				height: 1139px;
+				margin-bottom: 50px;
+				margin-top: 20px;
+			}
+			
+			#wrap{
+				width: 1208px;
+				height: 1139px;
+				padding-bottom: 50px;
+				margin: 0 auto;
+			}
+			#wrap h2{
+				width: 1188px;
+				height: 36px;
+				padding: 0px 10px;
+				text-align: center;
+				font-weight: 400;
+				font-size: 24px;
+			}
+			#chufang{
+				margin-top: 30px;
+			}
+			#wrap-1{
+				width: 1208px;
+				height: 210px;
+				margin-top: 30px;
+				display: flex;
+				justify-content: space-between;
+			}
+			#wrap-left,#wrap-right{
+				width: 570px;
+				height: 210px;
+				background: #fae8c8;
+				position: relative;
+				display: flex;
+			}
+		.ul li{
+			list-style: none;
+			float: left;
+		    overflow: hidden;
+		    padding: 12px 0px 0px 20px;
+		}
+		.ul li a{
+		    color: #968d7d;
+		    font-size: 14px;
+		    width: 320px;
+			text-decoration: none;
+		}
+		.ul a span{
+			    float: left;
+			    font-weight: bold;
+			    display: block;
+			    font-size: 18px;
+			    color: black;
+			    margin: 20px 0px 0px 0px;
+			    padding: 0px 0px 0px 20px;
+			    width: 280px;
+			
+		}
+		.ul a span:hover{
+			color:  #9fbe06;
+		}	
+		.small{
+			width: 63px;
+		    height: 20px;
+		    position: absolute;
+		    display: block;
+		    background: url(img/food-inf-title-bg.png) center center no-repeat;
+		    top: -8px;
+		    right: 0px;
+		    color: #fff;
+		    font-size: 14px;
+		    padding: 5px 10px;
+		}	
+		.small:hover{
+			color: gray;
+		}
+		/*点击进行切换的页面*/
+		#wrap-2{
+			height: 30px;
+			margin-top: 30px;
+			display: flex;
+			justify-content: space-between;
+		 	justify-content: flex-start;
+		}
+		.food-eat{
+			color: red;
+		}
+		.food-yue{
+			width: 180px;
+			height: 30px;
+			margin-left: 10px;
+			cursor:pointer;
+		}
+		#wrap-2 img{
+			vertical-align: middle;
+		}
+		
+		/*切换的页面*/
+		#food{
+			position: relative;
+			width: 1208px;
+			height: 688px;
+			margin-top: 10px;
+			padding: 10px;
+		}
+		.wrap-3{
+			width: 1208px;
+			height: 688px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+		.wrap-3-1{
+			width: 1208px;
+			height: 688px;
+			margin: 0 auto;
+			position: absolute;
+			top: 1060px;
+			z-index: 1;
+		}
+		.pic{
+			width: 265px;
+			height: 292px;
+			float: left;
+			margin-right: 42px;
+			margin-bottom: 42px;
+			padding-bottom: 10px;
+			background: #fbedd3;
+		}	
+		.pic:hover a{
+			color: #9fbe06;
+		}
+		.picage{
+			width: 265px;
+			height: 265px;
+		}
+		.pic div img{
+			margin-left: 20px;
+			vertical-align: middle;
+		}
+		.pic div a:nth-child(3){
+			color: red;
+			font-size: 12px;
+		}
+		.pic div{
+			margin-left: 10px;
+		}
+		.pic div a{
+			color: black;
+			text-decoration: none;
+		}
+		.pic:nth-child(4){
+			margin-right: 0;
+		}
+		.pic:nth-child(8){
+			margin-right: 0;
+		}	
+		/*五个页面的翻页*/
+		#page{
+			position: absolute;
+			top: 1000px;
+			width: 1208px;
+			height: 688px;
+			margin-top: 10px;
+			padding: 10px;
+			/*display: none;*/
+		}
+		.last{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			vertical-align: middle;
+			opacity: 0;
+		}
+		.last span{
+			line-height: 35px;
+		}	
+		.nav{
+			float: right;
+			margin-right: 30px;
+		}	
+		.nav a{
+			color: gray;
+			text-decoration: none;
+			display: inline-block;
+			border: 1px solid lightgray;
+			padding: 5px 10px;
+		}
+		/*翻页*/
+		#last{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			vertical-align: middle;
+		}
+		#last span{
+			line-height: 35px;
+		}	
+		#nav{
+			float: right;
+			margin-right: 30px;
+		}	
+		#nav a{
+			color: gray;
+			text-decoration: none;
+			display: inline-block;
+			border: 1px solid lightgray;
+			padding: 5px 10px;
+		}
+		
+		
+		/*底部*/	
+		#foot{
+			width: 100%;
+			height: 729px;
+			padding-bottom: 20px;
+			background: gray;
+		}
+
+			
+			/*反馈意见表*/
+			
+			#yijian {
+				width: 40px;
+				height: 40px;
+				background: #666;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				padding-bottom: 2px;
+				padding-top: 3px;
+				cursor:pointer;
+			}
+			.parent{
+				position: fixed;
+				bottom: 0;
+				right: 0;
+			}
+			#sheet{
+				width: 357px;
+				height: 298px;
+				position: absolute;
+				/*top: -100px;
+				left: -388px;*/
+				background-color: white;
+				box-shadow: 2px 2px 10px 2px grey;
+				padding: 0px 10px 0px 20px;
+				display: none;
+				z-index: 3;
+				animation: run 0.5s 0s linear forwards;
+			}
+			
+			@keyframes run{
+				from{
+					top: 0;
+					left: -388px;
+				}
+				to{
+					top: -255px;
+					left: -388px;
+				}
+			}
+			@keyframes run1{
+				from{
+					top: -255px;
+					left: -388px;
+				}
+				to{
+					top: 50px;
+					left: -388px;
+				}
+			}
+			.sheet-title{
+				width: 327px;
+				height: 28px;
+				padding-top: 5px;
+				line-height: 28px;
+			    font-size: 18px;
+			    font-weight: 700;
+			    display: flex;
+			    justify-content: space-between;
+			}
+			#disappear{
+				color: lightgray;
+				cursor:pointer;
+			}
+			.sheet-content{
+				width: 317px;
+				height: 227px;
+				padding: 10px 10px 0px 0px;
+				font-size: 12px;
+			}
+			.sheet-content-t span{
+				color: red;
+			}
+			.sheet-content textarea{
+				width: 300px;
+			    height: 54px;
+			    padding: 4px;
+			    margin: 6px 0 9px;
+			    vertical-align: top;
+			    resize: none;
+			    overflow: auto;
+			    box-sizing: content-box!important;
+			    display: inline-block;
+			    border: 1px solid lightgray;
+			    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			}
+			#contact{
+				border: 1px solid lightgray;
+				width: 300px;
+				height: 30px;
+				padding: 5px;
+				margin-top: 10px;
+			}
+			#btn{
+				width: 55px;
+				height: 24px;
+				padding: 0px 14px;
+				background-color: #388bff;
+				line-height: 24px;
+				margin-top: 20px;
+			}
+			#btn a{
+				color: white;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			#big-box{
+				width: 100%;
+				height: 100vh;
+				background-color: black;
+				opacity: 0.3;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="top"></div>
+			<img src="img/download3.jpg" id="img" alt="" />
+			<div id="content">
+				<div id="wrap">
+					<h2>健康资讯我先知</h2>
+					<div id="wrap-1">
+						<div id="wrap-left">
+							<img src="img/food-inf-about01.jpg" alt="" />
+							<a href="###"><span class="small">依谷快报</span></a>
+							<ul class="ul">
+								<a href="###"><span>依谷快报关于系统升级客户热线、物流配送暂停服务公告</span></a>
+								<li><a href="###">关于客户热线4001100755暂停服务的通知</a></li>
+								<li><a href="###">春节期间依谷网快递停发通知！</a></li>
+								<li><a href="###">关于系统升级客户热线、物流配送暂停服务公告</a></li>
+								<li><a href="###">关于中秋国庆物流配送公告</a></li>
+							</ul>
+						</div>
+						<div id="wrap-right">
+							<img src="img/food-inf-about02.jpg" alt="" />
+							<a href="###"><span class="small">依谷快报</span></a>
+							<ul class="ul">
+								<a href="###"><span>酥香炸茄盒，了解一下 </span></a>
+								<li><a href="###">追剧不吃零食的后果？！</a></li>
+								<li><a href="###">想做冻龄少女，首先要学会怎么做它</a></li>
+								<li><a href="###">最全的厨房生活小技巧，让烹饪更佳轻松！</a></li>
+								<li><a href="###">一个鸡蛋搞定你一天的伙食，美味又营养！</a></li>
+							</ul>
+						</div>
+					</div>
+					<h2 id="chufang">我的厨房我做主</h2>
+					<div id="wrap-2">
+						<div class="food-yue">
+							<div>
+								<img src="img/food-inf-cfkp.png" alt="" />
+								<span class="food-eat">粤菜(24)</span>	
+							</div>
+						</div>
+						<div class="food-yue">
+							<div>
+								<img src="img/food-inf-cfkp.png" alt="" />
+								<span class="food-eat">川菜(18)</span>
+							</div>
+						</div>
+						<div class="food-yue">
+							<div>
+								<img src="img/food-inf-cfkp.png" alt="" />
+								<span class="food-eat">湘菜(13)</span>
+							</div>
+						</div>
+						<div class="food-yue">
+							<div>
+								<img src="img/food-inf-cfkp.png" alt="" />
+								<span class="food-eat">汤(22)</span>
+							</div>
+							
+						</div>
+						<div class="food-yue">
+							<div>
+								<img src="img/food-inf-cfkp.png" alt="" />
+								<span class="food-eat">甜品(10)</span>
+							</div>
+							
+						</div>
+						<div class="wrap-3-1">
+							<div class="pic">
+								<a href="like01.html"><img src="img/footprint2.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/footprint2.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/age6.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/age6.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div> 
+							<div class="pic">
+								<a href="like01.html"><img src="img/food-inf-about01.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/food-inf-about01.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="food">
+						<div class="wrap-3">
+							<div class="pic">
+								<a href="like01.html"><img src="img/age6.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/age6.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							
+						</div>
+						<div class="wrap-3">
+							<div class="pic">
+								<a href="like01.html"><img src="img/food-inf-about01.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/food-inf-about01.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							
+						</div>
+						<div class="wrap-3">
+							<div class="pic">
+								<a href="like01.html"><img src="img/cake.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/cake.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							
+						</div>
+						<div class="wrap-3">
+							<div class="pic">
+								<a href="like01.html"><img src="img/tofu.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/tofu.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+						</div>
+						<div class="wrap-3">
+							<div class="pic">
+								<a href="like01.html"><img src="img/footprint2.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+							<div class="pic">
+								<a href="like01.html"><img src="img/footprint2.jpg" class="picage" alt="" /></a>
+								<div>
+									<a href="like01.html">香肠鸡蛋堡</a>
+									<a href=""><img src="img/xin.png" alt="" /></a>
+									<a href="">166</a>
+								</div>
+							</div>
+						</div>
+						<!--<div style="clear: both;"></div>-->
+						<div id="last">
+							<span style="margin:20px 0px 0px 480px">共<span>12</span>页，当前第<span>3</span>页,共有<span>93</span>条记录</span>
+							<div id="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###">3</a>
+								<a href="###">4</a>
+								<a href="###">5</a>
+								<a href="###">...</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+					</div>
+					<div id="page">
+						<!--第一页-->
+						<div class="last">
+							<span style="margin:20px 0px 0px 480px">共<span>3</span>页，当前第<span>1</span>页,共有<span>24</span>条记录</span>
+							<div class="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###">3</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+						<!--第二页-->
+						<div class="last">
+							<span style="margin:20px 0px 0px 480px">共<span>3</span>页，当前第<span>1</span>页,共有<span>18</span>条记录</span>
+							<div class="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###">3</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+						<!--第三页-->
+						<div class="last">
+							<span style="margin:20px 0px 0px 480px">共<span>2</span>页，当前第<span>1</span>页,共有<span>13</span>条记录</span>
+							<div class="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+						<!--第四页-->
+						<div class="last">
+							<span style="margin:20px 0px 0px 480px">共<span>3</span>页，当前第<span>1</span>页,共有<span>22</span>条记录</span>
+							<div class="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###">3</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+						<!--第五页-->
+						<div class="last">
+							<span style="margin:20px 0px 0px 480px">共<span>2</span>页，当前第<span>1</span>页,共有<span>10</span>条记录</span>
+							<div class="nav">
+								<a href="###"><上一页></a>
+								<a href="###">1</a>
+								<a href="###">2</a>
+								<a href="###"><下一页></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div id="foot"></div>
+		</div>
+		
+		
+		<div class="parent">
+			<p id="yijian">反馈建议</p>
+			<p id="big-box"></p>
+			<div id="sheet">
+				<div class="sheet-title">
+					<span>意见反馈</span>
+					<span id="disappear">X</span>
+				</div>
+				<div class="sheet-content">
+					<p class="sheet-content-t">反馈内容<span>（*必填）</span></p>
+					<textarea  placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（400字以内），感谢您的支持"></textarea>
+					<p>联系方式</p>
+					<input type="text" id="contact" placeholder="请留下您的联系方式，以便我们及时回复您"/>
+					<p id="btn"><a href="###">提交反馈</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+<script	type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		//点击粤菜进行页面切换
+		$(".food-yue").each(function(index){
+			$(this).click(function(){
+				var i= $(this).index();
+				//主页面菜品消失
+				$(this).siblings(".wrap-3-1").css({"display":"none","z-index":"0"});
+				//菜品出现
+				$(this).parent().siblings("#food").children(".wrap-3").eq(i).css({"opacity":"1","z-index":"1"}).siblings().css("opacity","0");
+				//翻页码出现
+				$(this).parent().siblings("#page").children(".last").eq(i).css("opacity","1").siblings().css("opacity","0");
+			})
+		})
+		
+		
+		
+		
+		//点击反馈建议建议页面显示
+		$("#yijian").click(function(){
+			$("#big-box").css("display","block");
+			$("#sheet").css('animation','run 0.5s both');
+			$("#sheet").css("display","block");
+		})
+	
+		$("#disappear").click(function(){
+			$("#sheet").css('animation','run1 0.5s both');
+			$("#big-box").css("display","none");
+		})
+		//点击提交反馈输入框清空
+		$("#btn").click(function(){
+			$("textarea").val("");
+			$("#contact").val("");
+		})
+		
+		
+		//点击翻页
+		$("#nav a").each(function(){
+			$(this).click(function(){
+				$(this).css("border","none").siblings().css('border','1px solid lightgray');
+			})
+		})
+	</script>
+</html>
+						
+						

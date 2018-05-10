@@ -1,0 +1,553 @@
+<!--企业定制页面-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>企业定制</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 100%;
+				height: 3196px;
+				padding-bottom: 50px;
+			}
+			#top{
+				width: 100%;
+				height: 160px;
+				background: gray;
+			}
+			#backgroundImg{
+				width: 100%;
+				height: 495px;
+				background: url(img/qydz-banner.jpg) 0 0 /100% 495px no-repeat;
+			}
+			#exchange{
+				width: 350px;
+				height: 495px;
+				padding-top: 0px;
+				position: relative;
+				top: -495px;
+				right: 18%;
+				float: right;
+			}
+			#black{
+				width: 350px;
+				height: 495px;
+				background:black;
+				opacity: 0.6;
+				position: relative;
+			}
+			#exchange_top{
+				color: white;
+				font-size: 18px;
+				padding: 10px 20px;
+				border-bottom: 1px solid white;
+				position: relative;
+				top: -495px;
+			}
+			#input{
+				position: relative;
+				padding-left: 20px;
+				width: 350px;
+				z-index: 1;
+				top: -475px;
+			}
+			#card-number,#card-password,#btn{
+				border: 1px solid white;
+				background: white;
+				width: 290px;
+				height: 25px;
+				padding: 5px 0px 5px 10px;
+				margin-bottom: 15px;
+			}
+			#botton{
+				width: 302px;
+				height: 37px;
+				background: #fd7400;
+				border: 1px solid #fd7400;
+				border-radius: 5px;
+			}
+			#botton a{
+				font-size: 18px;
+				color: white;
+				text-decoration: none;
+			}
+			#wrap{
+				width: 100%;
+				height: 540px;
+				padding-bottom: 50px;
+				text-align: center;
+				position:relative;
+			}
+			#content{
+				width: 1188px;
+				height: 60px;
+				position: relative;
+				margin: 30px auto 0px;
+				padding: 30px;
+			}
+			/*轮播图*/
+				.aa img{
+					vertical-align: middle;
+				}
+				.aa{
+					width: 1250px;
+					height: 420px;
+					margin: 20px auto;
+					position: relative;
+				}
+				.aa div{
+					position: absolute;
+				}
+				.wrap,.box{
+					width: 100%;
+					height: 420px;
+				}
+				
+				.box div{
+					width: 60px; 
+				}
+
+			#content1{
+				width: 100%;
+				height: 473px;
+				background: #f5f5f5;
+				position: relative;
+				text-align: center;
+				padding-bottom: 30px;
+			}
+			#wrap1{
+				width: 1188px;
+				height: 60px;
+				margin: 30px auto 0px;
+				position: relative;
+				padding: 30px;
+				
+				
+			}
+			#wrap1-1{
+				width: 1188px;
+				height: 297px;
+				padding: 30px 10px 0px;
+				margin: auto;
+				display: flex;
+				
+			}
+			.wrap1-1-1{
+				width: 250px;
+				height: 293px;
+				margin-right: 50px;
+			}
+			.wrap1-1-1 h3{
+				font-size: 24px;
+				padding: 5px 0;
+			}
+			.wrap1-1-1 p{
+				width: 180px;
+				text-align: left;
+				padding: 5px 0;
+				margin: 0px 30px;
+				line-height: 24px;
+				font-size: 12px;
+			}
+			#content2{
+				width: 100%;
+				height: 501px;
+				position: relative;
+				text-align: center;
+				padding-bottom: 30px;
+				margin-top: 58px;
+			}
+			#wrap2{
+				width: 1188px;
+				height: 60px;
+				margin: 30px auto 0px;
+				position: relative;
+				padding: 30px;
+			}
+			#wrap2-1{
+				width: 1188px;
+				height: 321px;
+				padding: 30px 10px 0px;
+				margin: auto;
+				display: flex;
+				
+			}
+			.wrap2-1-1{
+				width: 250px;
+				height: 293px;
+				margin-right: 50px;
+			}
+			.wrap2-1-1 h3{
+				color: #f60;
+				font-size: 24px;
+				padding: 5px 0;
+			}
+			.wrap2-1-1 p{
+				width: 180px;
+				height: 96px;
+				margin: 0 30px;
+				padding: 5px 0;
+				font-size: 12px;
+			}
+			.wrap2-1-1 .arrow{
+				position: relative;
+				right: 0;
+				top: -37px;
+			}
+			#content3{
+				width: 100%;
+				height: 810px;
+				background: #f5f5f5;
+				position: relative;
+				text-align: center;
+				padding-bottom: 30px;
+			}
+			#wrap3{
+				width: 1188px;
+				height: 60px;
+				margin: 30px auto 0px;
+				position: relative;
+				padding: 30px;
+			}
+			#content4{
+				width: 100%;
+				height: 546px;
+				position: relative;
+				text-align: center;
+				padding-bottom: 30px;
+				margin-top: 58px;
+				/*border: 1px solid;*/
+			}
+			#wrap4{
+				width: 1188px;
+				height: 60px;
+				margin: 30px auto 0px;
+				position: relative;
+				padding: 30px;
+			}
+			
+			#foot{
+				width: 100%;
+				height: 729px;
+				padding-bottom: 20px;
+				background: gray;
+			}
+			
+			
+			
+			
+			/*反馈意见表*/
+			
+			#yijian {
+				width: 40px;
+				height: 40px;
+				background: #666;
+				color: white;
+				font-size: 16px;
+				text-align: center;
+				padding-bottom: 2px;
+				padding-top: 3px;
+				cursor:pointer;
+			}
+			.parent{
+				position: fixed;
+				bottom: 0;
+				right: 0;
+			}
+			#sheet{
+				width: 357px;
+				height: 298px;
+				position: absolute;
+				/*top: -100px;
+				left: -388px;*/
+				background-color: white;
+				box-shadow: 2px 2px 10px 2px grey;
+				padding: 0px 10px 0px 20px;
+				display: none;
+				z-index: 3;
+				animation: run 0.5s 0s linear forwards;
+			}
+			
+			@keyframes run{
+				from{
+					top: 0;
+					left: -388px;
+				}
+				to{
+					top: -255px;
+					left: -388px;
+				}
+			}
+			@keyframes run1{
+				from{
+					top: -255px;
+					left: -388px;
+				}
+				to{
+					top: 50px;
+					left: -388px;
+				}
+			}
+			.sheet-title{
+				width: 327px;
+				height: 28px;
+				padding-top: 5px;
+				line-height: 28px;
+			    font-size: 18px;
+			    font-weight: 700;
+			    display: flex;
+			    justify-content: space-between;
+			}
+			#disappear{
+				cursor:pointer;
+				color: lightgray;
+			}
+			.sheet-content{
+				width: 317px;
+				height: 227px;
+				padding: 10px 10px 0px 0px;
+				font-size: 12px;
+			}
+			.sheet-content-t span{
+				color: red;
+			}
+			.sheet-content textarea{
+				width: 300px;
+			    height: 54px;
+			    padding: 4px;
+			    margin: 6px 0 9px;
+			    vertical-align: top;
+			    resize: none;
+			    overflow: auto;
+			    box-sizing: content-box!important;
+			    display: inline-block;
+			    border: 1px solid lightgray;
+			    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+			}
+			#contact{
+				border: 1px solid lightgray;
+				width: 300px;
+				height: 30px;
+				padding: 5px;
+				margin-top: 10px;
+			}
+			#btn{
+				width: 55px;
+				height: 24px;
+				padding: 0px 14px;
+				background-color: #388bff;
+				line-height: 24px;
+				margin-top: 20px;
+			}
+			#btn a{
+				color: white;
+				font-size: 12px;
+				text-decoration: none;
+			}
+			#big-box{
+				width: 100%;
+				height: 100vh;
+				background-color: black;
+				opacity: 0.3;
+				position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			
+		</style>	
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id='top'></div>
+			<p id="backgroundImg"></p>
+			<div id="exchange">
+				<div id="black"></div>
+				<p id="exchange_top">卡券兑换</p>
+				<div id='input'>
+					<input type="text" id="card-number" placeholder="卡号"/><br/>
+					<input type="password" id="card-password" placeholder="密码"/><br/>
+					<button id="botton"><a href="">立即兑换/激活</a></button>
+					<img src="img/qydz-tq.png" alt="" />
+					<img src="img/qydz-zxkf.png" alt="" />
+					<img src="img/qydz-dh.png" alt="" />
+				</div>
+			</div>
+			<div id="wrap">
+				<div id="content">
+					<img src="img/qydz-title-01.jpg"/>
+				</div>
+				<div class="aa">
+					<div class="wrap">
+						<div class="big_img"><img src="img/qydz001.jpg" alt=""></div>
+						<div class="big_img"><img src="img/qydz002.jpg" alt=""></div>
+						<div class="big_img"><img src="img/qydz003.jpg" alt=""></div>
+						<div class="big_img"><img src="img/qydz004.jpg" alt=""></div>
+						<div class="big_img"><img src="img/qydz005.jpg" alt=""></div>
+						<div class="big_img"><img src="img/qydz006.jpg" alt=""></div>
+					</div>
+					<div class="box" >
+						<div class="small_img"><img src="img/qydz-tab01.jpg" alt=""></div>
+						<div class="small_img"><img src="img/qydz-tab02.jpg" alt=""></div>
+						<div class="small_img"><img src="img/qydz-tab03.jpg" alt=""></div>
+						<div class="small_img"><img src="img/qydz-tab04.jpg" alt=""></div>
+						<div class="small_img"><img src="img/qydz-tab05.jpg" alt=""></div>
+						<div class="small_img"><img src="img/qydz-tab06.jpg" alt=""></div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div style="clear: both;"></div>
+			<div id="content1">
+				<div id="wrap1">
+					<img src="img/qydz-title-02.jpg" />
+				</div>
+				<div id="wrap1-1">
+					<div class="wrap1-1-1">
+						<img src="img/qyzx-ti01.jpg" alt="" />
+						<h3>专人服务</h3>
+						<p>企业专线 400-110-0755</p>
+					</div>
+					<div class="wrap1-1-1">
+						<img src="img/qyzx-ti02.jpg" alt="" />
+						<h3>尊享灵活支付</h3>
+						<p>大额采购，享受低价或议价销售</p>
+						<p>一站式订购服务专业贴心</p>
+					</div>
+					<div class="wrap1-1-1">
+						<img src="img/qyzx-ti03.jpg" alt="" />
+						<h3>尊享大额优惠</h3>
+						<p>货到付款 ·公司转账</p>
+						<p>在线支付 ·支票</p>
+						<p>签订销售合同</p>
+					</div>
+					<div class="wrap1-1-1">
+						<img src="img/qyzx-ti04.jpg" alt="" />
+						<h3>专项优质服务</h3>
+						<p>售前咨询服务</p>
+						<p>售后无忧服务</p>
+						<p></p>
+					</div>
+				</div>	
+			</div>
+			<div style="clear: both;"></div>
+			<div id="content2">
+				<div id="wrap2">
+					<img src="img/qydz-title-03.jpg" alt="" />
+				</div>
+				<div id="wrap2-1">
+					<div class="wrap2-1-1">
+						<img src="img/qyfw-ti01.jpg" alt="" />
+						<img src="img/qyfw-arrow-1.jpg" class="arrow" alt="" />
+						<h3>致电我们</h3>
+						<p>企业客户拨打400-110-0755，说明是企业订购并留下姓名和联系方式，依谷网大客户代表会亲自和您联系。</p>
+					</div>
+					<div class="wrap2-1-1">
+						<img src="img/qyfw-ti02.jpg" alt="" />
+						<img src="img/qyfw-arrow-1.jpg" class="arrow" alt="" />
+						<h3>专属代表跟进</h3>
+						<p>专属代表先电话了解需求，或上门拜访亲自确认细节，保证客户的所有需求都被完整的了解及执行。同时，我们也会为您提供更好的解决方案。</p>
+					</div>
+					<div class="wrap2-1-1">
+						<img src="img/qyfw-ti03.jpg" alt="" />
+						<img src="img/qyfw-arrow-1.jpg" class="arrow" alt="" />
+						<h3>生产订单 专人配送</h3>
+						<p>专属代表负责根据客户已确定的需求，生成订单，安排配送等各个环节，全程跟踪服务，无须您再为任何细节操心。</p>
+					</div>
+					<div class="wrap2-1-1">
+						<img src="img/qyfw-ti04.jpg" alt="" />
+						<h3>验收 结算</h3>
+						<p>订购的礼品验收满意后再付款，专属代表根据需求开具发票并结算。专属代表，服务至您购买体验的最后一站</p>
+					</div>
+				</div>
+			</div>
+			<div style="clear: both;"></div>
+			<div id="content3">
+				<div id="wrap3">
+					<img src="img/qydz-title-04.jpg" />
+				</div>
+				<img src="img/qydz-hp.jpg" alt="" />
+			</div>
+			<div style="clear: both;"></div>
+			<div id="content4">
+				<div id="wrap4">
+					<img src="img/qydz-title-05.jpg" />
+				</div>
+				<img src="img/qydz-qy.jpg" alt="" />
+			</div>
+			<div style="clear: both;"></div>
+			<div id="foot">
+				
+			</div>
+		</div>
+		<div class="parent">
+			<p id="yijian">反馈建议</p>
+			<p id="big-box"></p>
+			<div id="sheet">
+				<div class="sheet-title">
+					<span>意见反馈</span>
+					<span id="disappear">X</span>
+				</div>
+				<div class="sheet-content">
+					<p class="sheet-content-t">反馈内容<span>（*必填）</span></p>
+					<textarea  placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（400字以内），感谢您的支持"></textarea>
+					<p>联系方式</p>
+					<input type="text" id="contact" placeholder="请留下您的联系方式，以便我们及时回复您"/>
+					<p id="btn"><a href="###">提交反馈</a></p>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+		
+	<script	type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		//点击反馈建议建议页面显示
+		$("#yijian").click(function(){
+			$("#big-box").css("display","block");
+			$("#sheet").css('animation','run 0.5s both');
+			$("#sheet").css("display","block");
+		})
+		var top1 = -255;
+		$("#disappear").click(function(){
+			$("#sheet").css('animation','run1 0.5s both');
+			$("#big-box").css("display","none");
+		})
+		//点击提交反馈输入框清空
+		$("#btn").click(function(){
+			$("textarea").val("");
+			$("#contact").val("");
+		})
+		
+		
+		
+		
+	//轮播图	
+	$('.wrap div').each(function(index){
+		$('.wrap div').eq(index).css('left',index*60+'px')
+		$('.wrap div:gt(0)').css('display','none')
+	})
+	$('.box div').each(function(index){
+		$('.box div').eq(index+1).css('left',(840+index*60)+'px')
+		$(this).mouseover(function(){
+			var i = $(this).index();
+			$(this).css('display','none').siblings().css('display','block');
+			$('.wrap div').eq(i).css('display','block').siblings().css('display','none');
+			for(var z=i+1; z<6; z++){
+				$('.box div').eq(z).css('left',(780+z*60)+'px');	
+			}
+			for (var y = 0; y < i; y++) {
+				$('.box div').eq(y).css('left',(y*60)+'px');
+			}
+		})		
+	})
+
+		
+
+	</script>
+</html>
